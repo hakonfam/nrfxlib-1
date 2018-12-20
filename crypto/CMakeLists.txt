@@ -14,8 +14,8 @@ if (CONFIG_NRF_OBERON)
     message(WARNING "This combination of SoC and floating point ABI is not supported by the nrf_oberon lib."
                     "(${OBERON_LIB} doesn't exist.)")
   endif()
-  target_include_directories(nrfxlib_crypto INTERFACE ${OBERON_BASE}/include)
-  target_link_libraries(nrfxlib_crypto INTERFACE ${OBERON_LIB})
+  target_include_directories(${IMAGE}nrfxlib_crypto INTERFACE ${OBERON_BASE}/include)
+  target_link_libraries(${IMAGE}nrfxlib_crypto INTERFACE ${OBERON_LIB})
 endif()
 
 if (CONFIG_NRF_CC310_BL)
@@ -30,8 +30,8 @@ if (CONFIG_NRF_CC310_BL)
     message(WARNING "This combination of SoC, floating point ABI, and interrupts settings is not supported by the nrf_cc310_bl lib."
                     "(${CC310_BL_LIB} doesn't exist.)")
   endif()
-  target_include_directories(nrfxlib_crypto INTERFACE ${CC310_BL_BASE}/include)
-  target_link_libraries(nrfxlib_crypto INTERFACE ${CC310_BL_LIB})
+  target_include_directories(${IMAGE}nrfxlib_crypto INTERFACE ${CC310_BL_BASE}/include)
+  target_link_libraries(${IMAGE}nrfxlib_crypto INTERFACE ${CC310_BL_LIB})
 endif()
 
 assert(CONFIG_NRF_OBERON OR CONFIG_NRF_CC310_BL "NRFXLIB_CRYPTO enabled, but neither nrf_cc310_bl nor nrf_oberon are enabled.")
