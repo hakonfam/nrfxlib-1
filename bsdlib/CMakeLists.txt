@@ -20,9 +20,15 @@ endif()
 # and must therefore be placed after the bsd library on the linker's
 # command line.
 zephyr_link_libraries(
-  ${BSD_LIB_PATH}/libbsd_nrf9160_xxaa.a
   ${IMAGE}nrfxlib_crypto
   c
   )
 
 zephyr_include_directories(include)
+
+set(libname bsd_lib_nrf9160)
+add_library(${libname} STATIC IMPORTED GLOBAL)
+set_target_properties(${libname} PROPERTIES IMPORTED_LOCATION
+  ${BSD_LIB_PATH}/libbsd_nrf9160_xxaa.a
+  )
+zephyr_append_cmake_library(${libname})
