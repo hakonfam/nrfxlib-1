@@ -13,7 +13,7 @@ Refer to their respective documentation for more information.
    :maxdepth: 2
    :caption: Contents:
 
-   bsdlib/README
+   nrf_modem/README
    crypto/README
    mpsl/README
    nfc/README
