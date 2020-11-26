@@ -7,6 +7,7 @@
 /**@file nrf_modem.h
  *
  * @defgroup nrf_modem Modem library
+ * @ingroup nrf_modem
  * @{
  * @brief Application interface offered for management of the Modem library.
  */

@@ -17,6 +17,18 @@
 extern "C" {
 #endif
 
+/**@defgroup nrf_modem_version Version number.
+ * @{
+ * @brief  Library version number.
+ */
+
+/**@brief Major version number. */
+#define NRF_MODEM_VERSION_MAJOR_NUMBER 0x0001
+
+/**@brief Minor version number. */
+#define NRF_MODEM_VERSION_MINOR_NUMBER 0x0000
+
+/**@} */
 
 /**@defgroup nrf_modem_reserved_memory Memory reserved for the library Memory
  * @{

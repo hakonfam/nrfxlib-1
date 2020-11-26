@@ -8,7 +8,7 @@
  * @file nrf_modem_os.h
  * @brief OS specific definitions.
  *
- * @defgroup nrf_modem_os Modem library OS glue
+ * @defgroup nrf_modem_os
  * @{
  */
 #ifndef NRF_MODEM_OS_H__
